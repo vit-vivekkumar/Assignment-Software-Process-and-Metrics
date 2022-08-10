@@ -1,0 +1,23 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#listView-cell {
+    -fx-background-color:white;
+}
+
+#userNameError {
+	-fx-text-fill:rgb(232,0,5);
+	-fx-font-family:cambria;
+	-fx-font-size: 14;
+}
+
+#serverAddressError {
+	-fx-text-fill:rgb(232,0,5);
+	-fx-font-family:cambria;
+	-fx-font-size: 14;	
+}
+
+#connectStatusResult {
+	-fx-text-fill:rgb(232,0,5);
+	-fx-font-family:cambria;
+	-fx-font-size: 14;
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.chatboard.ChatBoard">
+   <children>
+      <Separator layoutX="89.0" layoutY="45.0" />
+      <Label fx:id="connectionStatus" layoutX="10.0" layoutY="37.0" text="Connected to Server" />
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="57.0" spacing="4.0">
+         <children>
+            <ListView id="listView" fx:id="chatPane" prefHeight="380.0" prefWidth="500.0" />
+            <HBox alignment="CENTER">
+               <children>
+                  <TextArea fx:id="textMessage" prefHeight="40.0" prefWidth="450.0" />
+                  <Button mnemonicParsing="false" onAction="#sendMsg" prefHeight="40.0" prefWidth="50.0" text="Send">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <MenuBar prefWidth="520.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File" />
+          <Menu mnemonicParsing="false" text="Save">
+               <items>
+              <MenuItem mnemonicParsing="false" onAction="#saveMessages" text="Current Conversation" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Help">
+               <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+          </Menu>
+            <Menu mnemonicParsing="false" onAction="#exitConnection" text="Exit" />
+        </menus>
+      </MenuBar>
+      <Label fx:id="userNameLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="380.0" layoutY="37.0" prefHeight="17.0" prefWidth="130.0" text="blank" textAlignment="RIGHT">
+         <font>
+            <Font name="Comic Sans MS Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="notificationLabel" alignment="CENTER" layoutX="151.0" layoutY="37.0" prefHeight="17.0" prefWidth="220.0" text="Welcome" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

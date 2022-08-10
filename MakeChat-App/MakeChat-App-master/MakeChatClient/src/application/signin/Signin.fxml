@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.signin.SignIn">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="120.0" fitWidth="120.0" layoutX="200.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="160.0" prefHeight="19.0" prefWidth="260.0" text="Make Chat Zone -  Chat with Friends" textAlignment="CENTER">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER" layoutX="66.0" layoutY="205.0" prefHeight="260.0" prefWidth="400.0" spacing="3.0">
+         <children>
+            <TextField fx:id="userNameEntry" prefHeight="30.0" prefWidth="300.0" promptText="Provide an Username" />
+            <Label fx:id="userNameError" alignment="CENTER" />
+            <TextField fx:id="emailEntry" prefHeight="30.0" prefWidth="300.0" promptText="Provide an email address (Optional)" />
+            <Label fx:id="emailError" alignment="CENTER" />
+            <HBox alignment="CENTER" spacing="26.0">
+               <children>
+                  <TextField fx:id="serverAddressEntry" prefHeight="30.0" prefWidth="280.0" promptText="Provide server address" />
+                  <TextField fx:id="portNumberEntry" prefHeight="30.0" prefWidth="85.0" promptText="Port Number" />
+               </children>
+            </HBox>
+            <Label fx:id="serverAddressError" alignment="CENTER" />
+            <Button fx:id="connectButton" mnemonicParsing="false" onAction="#handleConnectButton" prefHeight="25.0" prefWidth="300.0" text="Connect" />
+            <Label fx:id="connectStatusResult" alignment="CENTER" prefHeight="18.0" prefWidth="373.0" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
